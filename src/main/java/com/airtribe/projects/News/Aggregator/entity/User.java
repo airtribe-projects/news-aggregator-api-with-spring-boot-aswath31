@@ -22,8 +22,8 @@ public class User {
 
   private boolean isEnabled;
 
-//  @OneToOne(mappedBy = "user")
-//  private VerificationToken verificationToken;
+  @OneToOne(mappedBy = "user")
+  private VerificationToken verificationToken;
 
   public User(Long userId, String username, String password, String role, boolean isEnabled) {
     this.userId = userId;
@@ -77,11 +77,11 @@ public class User {
     isEnabled = enabled;
   }
 
-//  public VerificationToken getVerificationToken() {
-//    return verificationToken;
-//  }
-//
-//  public void setVerificationToken(VerificationToken verificationToken) {
-//    this.verificationToken = verificationToken;
-//  }
+  public VerificationToken getVerificationToken() {
+    return verificationToken;
+  }
+
+  public void setVerificationToken(VerificationToken verificationToken) {
+    this.verificationToken = verificationToken;
+  }
 }
